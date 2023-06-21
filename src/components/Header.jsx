@@ -9,11 +9,12 @@ import { AiFillCar } from 'react-icons/ai'
 import { FaUmbrellaBeach } from 'react-icons/fa'
 
 export default function Header () {
+
     return(
         <SCHeader>
             <SCLogo src={ Logo } />
-            <SCTitle>Pack Ur Bag</SCTitle>
             <SCProfile>
+                <SCName>Pedro</SCName>
                 <SCTbLuggage />
             </SCProfile>
         </SCHeader>
@@ -47,29 +48,25 @@ const SCLogo = styled.img`
   background-color: none;
 `
 
-const SCTitle = styled.p`
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-`
-
 const SCProfile = styled.div`
-    width: 60px;
-    height: 60px;
-    
-    border-radius: 50%;
-    border: 1px solid black;
+    width: 120px;
 
-    background-color: white;
+    margin-right: 15px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+`
+
+const SCName = styled.p`
+    font-size: 25px;
+    font-weight: bold;
+    color: #392620;
 `
 
 const SCTbLuggage = styled(TbLuggage)`
     width: 40px;
     height: 40px;
 
-    color: orange;
+    color: #392620;
 `
