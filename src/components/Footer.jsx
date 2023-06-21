@@ -1,13 +1,13 @@
 import styled from "styled-components"
-import { BsHouseFill } from "react-icons/bs"
+import { BsHouseDoorFill } from "react-icons/bs"
 import { BsPersonFill } from "react-icons/bs"
 
 export default function Footer () {
     return(
         <SCFooter>
-            <SCBsHouseFill />
-            <p>Your Travels</p>
-            <BsPersonFill />
+            <SCBsHouseDoorFill />
+            <SCUrTrips>This Page</SCUrTrips>
+            <SCBsPersonFill />
         </SCFooter>
     )
 }
@@ -27,12 +27,18 @@ const SCFooter = styled.div`
 
     z-index:10;
 
-    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 3px rgb(0, 0, 0, 0.2);
 `
 
-const SCBsHouseFill = styled(BsHouseFill)`
-    
+const SCBsHouseDoorFill = styled(BsHouseDoorFill)`
+    width: 45px;
+    height: 55px;
 `
+const SCUrTrips = styled.p`
+    font-size: 35px;
+`
+
 const SCBsPersonFill = styled(BsPersonFill)`
-    
+    width: 45px;
+    height: 55px;
 `
