@@ -7,6 +7,7 @@ import { createGlobalStyle } from "styled-components";
 
     body{
         padding: 70px 0 70px 0;
+        background-color: white;
     }
  `
 
