@@ -1,16 +1,39 @@
 import styled, { keyframes } from "styled-components"
 import Logo from '../assets/BackPack.png'
 import ResetStyle from '../style/ResetStyle'
+import { useNavigate } from "react-router-dom";
 
-export default function LogIn () {
+export default function LogIn(props) {
+
+    const {name, setName} = props;
+
+    console.log(name)
+    
+    const navigate = useNavigate();
+
+    function LogIn(){
+        navigate('/homepage')
+    }
+
     return (
         <>
         <ResetStyle />
         <SCLogIn>
-            <SCDiv>
-                <SCLogo src={Logo} />
-                <SCTitle>Pack  Ur  Bag</SCTitle>
-            </SCDiv>
+            <SCCOntainer>
+                <SCDiv>
+                    <SCLogo src={Logo} />
+                    <SCTitle>Pack  Ur  Bag</SCTitle>
+                </SCDiv>
+                <SCInput>
+                    <SCName 
+                    type="text" 
+                    placeholder="How would you like to be called?"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    ></SCName>
+                    <SCSubmit type="submit" onClick={LogIn} value='Entrar'></SCSubmit>
+                </SCInput>
+            </SCCOntainer>
         </SCLogIn>
         </>
     )
@@ -41,6 +64,16 @@ const SCLogIn = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap:wrap;
+`
+
+const SCCOntainer = styled.div`
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 `
 
 const SCDiv = styled.div`
@@ -66,4 +99,56 @@ const SCTitle = styled.p`
     font-family: 'Exo 2', sans-serif;
 
     color: #392620;
+`
+const SCInput = styled.div`
+    width: 250px;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+`
+
+const SCLabel = styled.label`
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-left: 10px;
+
+    color: #392620;
+`
+const SCName = styled.input`
+    width: 100%;
+    height: 30px;
+
+    margin: 10px;
+
+    background-color: #d7d7d7;
+
+    border-radius: 4px;
+    border: 1px solid #392620;
+
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+    color: #392620;
+`
+const SCSubmit = styled.input`
+    width: 70px;
+    height: 30px;
+
+    background-color: #d7d7d7;
+
+    border-radius: 4px;
+    border: 1px solid #392620;
+
+    position: absolute;
+    left: 90px;
+    top: 70px;
+
+    color: #392620;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bold;
 `

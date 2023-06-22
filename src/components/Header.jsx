@@ -8,13 +8,15 @@ import { GiSchoolBag } from 'react-icons/gi'
 import { AiFillCar } from 'react-icons/ai'
 import { FaUmbrellaBeach } from 'react-icons/fa'
 
-export default function Header () {
+export default function Header(props) {
+
+    const {name} = props;
 
     return(
         <SCHeader>
             <SCLogo src={ Logo } />
             <SCProfile>
-                <SCName>Pedro</SCName>
+                <SCName>{name}</SCName>
                 <SCTbLuggage />
             </SCProfile>
         </SCHeader>

@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 
 export default function HomePage (props) {
 
-    const {page, setPage} = props
+    const {page, setPage, name} = props
 
     console.log(page)
 
@@ -11,7 +11,7 @@ export default function HomePage (props) {
 
     return(
         <>
-            <Header />
+            <Header name={name}/>
             <h1>HomePage</h1>
             <Footer page = {page}/>
         </>

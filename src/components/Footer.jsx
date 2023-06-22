@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { BsHouseDoor } from "react-icons/bs"
-import { BsPersonFill } from "react-icons/bs"
+import { BsPerson } from "react-icons/bs"
 
 export default function Footer (props) {
 
@@ -10,7 +10,7 @@ export default function Footer (props) {
         <SCFooter>
             <SCBsHouseDoor />
             <SCUrTrips>{page}</SCUrTrips>
-            <SCBsPersonFill />
+            <SCBsPerson />
         </SCFooter>
     )
 }
@@ -49,7 +49,7 @@ const SCUrTrips = styled.p`
     font-size: 35px;
 `
 
-const SCBsPersonFill = styled(BsPersonFill)`
+const SCBsPerson = styled(BsPerson)`
     width: 45px;
     height: 55px;
 
