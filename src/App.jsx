@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LogIn from './pages/LogIn'
+import LogIn from './pages/Login'
 import SignIn from './pages/SignIn'
 import HomePage from './pages/HomePage'
 import NewTrip from './pages/NewTrip'
 import Trip from './pages/Trip'
-import Profile from './pages/Profile'
+import Profile from './pages/profile'
 import { useState } from 'react'
 
 function App() {

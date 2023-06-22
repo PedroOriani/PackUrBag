@@ -5,11 +5,13 @@ import { TbLuggage } from 'react-icons/tb'
 import { GiSchoolBag } from 'react-icons/gi'
 import { AiFillCar } from 'react-icons/ai'
 import { FaUmbrellaBeach } from 'react-icons/fa'
+import Footer from '../components/Footer'
 
 export default function Profile(){
     return(
         <>
             <p>Profile</p>
+            <Footer />
         </>
     )
 }

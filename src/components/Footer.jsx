@@ -1,16 +1,27 @@
 import styled from "styled-components"
 import { BsHouseDoor } from "react-icons/bs"
 import { BsPerson } from "react-icons/bs"
+import { useNavigate } from "react-router-dom";
 
 export default function Footer (props) {
 
     const {page} = props;
 
+    const navigate = useNavigate()
+
+    function myTrips(){
+        navigate('/homepage')
+    }
+
+    function profile(){
+        navigate('/profile')
+    }
+
     return(
         <SCFooter>
-            <SCBsHouseDoor />
+            <SCBsHouseDoor onClick={myTrips}/>
             <SCUrTrips>{page}</SCUrTrips>
-            <SCBsPerson />
+            <SCBsPerson onClick={profile}/>
         </SCFooter>
     )
 }
@@ -24,22 +35,22 @@ const SCFooter = styled.div`
     position: fixed;
     bottom: 0;
 
+    background-color: orange;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     z-index:10;
 
-    box-shadow: 2px 2px 2px 3px rgb(0, 0, 0, 0.2);
+    box-shadow: 2px -50px 200px 2px orange;
 `
 
 const SCBsHouseDoor = styled(BsHouseDoor)`
     width: 45px;
     height: 55px;
 
-    color: orange;
-
-    border: black;
+    color: #392620;
 
     &hover{
         transform: scale()
@@ -47,11 +58,15 @@ const SCBsHouseDoor = styled(BsHouseDoor)`
 `
 const SCUrTrips = styled.p`
     font-size: 35px;
+
+    font-family: 'Exo 2', sans-serif;
+
+    color: #392620;
 `
 
 const SCBsPerson = styled(BsPerson)`
     width: 45px;
     height: 55px;
 
-    color: orange;
+    color: #392620;
 `

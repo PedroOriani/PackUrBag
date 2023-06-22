@@ -16,8 +16,7 @@ export default function Header(props) {
         <SCHeader>
             <SCLogo src={ Logo } />
             <SCProfile>
-                <SCName>{name}</SCName>
-                <SCTbLuggage />
+                <SCName>Welcome, {name}!</SCName>
             </SCProfile>
         </SCHeader>
     )
@@ -51,19 +50,23 @@ const SCLogo = styled.img`
 `
 
 const SCProfile = styled.div`
-    width: 120px;
+    width: 100%;
 
     margin-right: 15px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
+    font-family: 'Exo 2', sans-serif;
 `
 
 const SCName = styled.p`
     font-size: 25px;
     font-weight: bold;
+
     color: #392620;
+
+    font-family: 'Exo 2', sans-serif;
 `
 
 const SCTbLuggage = styled(TbLuggage)`
