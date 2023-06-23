@@ -43,7 +43,7 @@ const SCFooter = styled.div`
 
     z-index:10;
 
-    box-shadow: 2px -50px 200px 2px orange;
+    box-shadow: 2px -50px 150px 2px orange;
 `
 
 const SCBsHouseDoor = styled(BsHouseDoor)`
@@ -52,8 +52,8 @@ const SCBsHouseDoor = styled(BsHouseDoor)`
 
     color: #392620;
 
-    &hover{
-        transform: scale()
+    &:hover{
+        transform: scale(1.1);  
     }
 `
 const SCUrTrips = styled.p`
@@ -70,3 +70,5 @@ const SCBsPerson = styled(BsPerson)`
 
     color: #392620;
 `
+
+  
